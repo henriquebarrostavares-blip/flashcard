@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`</title>
+
+    </head>
+    <body>
+        <header class="cabecalho">
+            <h1>Vamos conferir</h1>
+            <nav>
+                <a href="#" class="cabecalho-link">Início</a>
+            </nav>
+        </header>
+        
+        <main>
+            <h2>Descubra a verdade passando o mouse</h2>
+            <section>
+            <article class="cartao">
+                 <div class="cartao-interno">
+                <div class="cartao-frente">
+                    <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem">
+                    <p>Pinguins conseguem voar como pássaros!</p>
+                </div>
+                
+                <div class="cartao-verso">
+                    <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim" class="cartao-imagem">
+                    <p>Pinguins não voam, mas são excelentes nadadores.</p>
+                </div>
+            </article>
+            </section>
+        </main>
+    </body>
+    
+    <style>
+        .cabecalho {
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #7E3E1C;
+        }
+        
+        .cartao {
+            width: 260px;
+            height: 200px;
+        }
+        
+        .cartao-imagem {
+            width: 100%;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #F2F2F2;
+        }
+        
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            color: #FFFFFF;
+            font-size: 24px;
+        }
+        
+        .cartao-interno {
+            position: relative;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .cartao:hover .cartao-interno {
+            transform: rotateY(180deg);
+        }   
+        
+        .cartao-frente, .cartao-verso {
+            position: absolute;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            backface-visibility: hidden;
+        }
+        
+        
+        .cartao-verso {
+            transform: rotateY(180deg);
+        }
+
+    section {
+            display: flex;
+            gap: 16px;
+        
+    }
+      
+        
+    </style>
+</html>
